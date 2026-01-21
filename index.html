@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melis Kırık | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'light-pink': '#FFF5F7',
+                        'accent-pink': '#D53F8C',
+                        'accent-dark': '#9B2C6B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-light-pink text-gray-800 font-sans selection:bg-accent-pink selection:text-white">
+
+    <!-- Top Bar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="glass-effect absolute inset-0 w-full h-full -z-10"></div>
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center relative z-10">
+            <a href="#" class="text-2xl font-montserrat font-bold text-accent-pink tracking-tight">M. KIRIK</a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about"
+                    class="nav-link text-gray-700 hover:text-accent-pink font-medium transition-colors">About</a>
+                <a href="#experience"
+                    class="nav-link text-gray-700 hover:text-accent-pink font-medium transition-colors">Experience</a>
+                <a href="#projects"
+                    class="nav-link text-gray-700 hover:text-accent-pink font-medium transition-colors">Projects</a>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="https://github.com/meliskirik" target="_blank"
+                    class="text-gray-600 hover:text-accent-pink transition-colors text-xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/meliskirik" target="_blank"
+                    class="text-gray-600 hover:text-accent-pink transition-colors text-xl">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-accent-pink focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-white/90 backdrop-blur-md absolute w-full border-t border-pink-100">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="#about" class="mobile-nav-link text-gray-700 hover:text-accent-pink font-medium">About</a>
+                <a href="#experience"
+                    class="mobile-nav-link text-gray-700 hover:text-accent-pink font-medium">Experience</a>
+                <a href="#projects"
+                    class="mobile-nav-link text-gray-700 hover:text-accent-pink font-medium">Projects</a>
+                <div class="flex space-x-4 pt-4 border-t border-pink-100">
+                    <a href="https://github.com/meliskirik" target="_blank"
+                        class="text-gray-600 hover:text-accent-pink text-xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/meliskirik" target="_blank"
+                        class="text-gray-600 hover:text-accent-pink text-xl">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / About Section -->
+    <section id="about" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <!-- Background Decorative Elements -->
+        <div class="absolute top-1/4 -left-10 w-64 h-64 bg-accent-pink/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 -right-10 w-96 h-96 bg-accent-pink/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-6 fade-in-up">
+                <p class="text-accent-pink font-medium tracking-wide">HEY, I AM</p>
+                <h1 class="text-5xl md:text-7xl font-montserrat font-bold leading-tight">
+                    <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 via-accent-pink to-accent-dark">Melis
+                        Kırık</span>
+                </h1>
+                <h2 class="text-2xl text-gray-600 font-light">Software Engineering Student</h2>
+                <p class="text-gray-600 leading-relaxed max-w-lg">
+                    Software Engineering Student | Open Source Enthusiast<br>
+                    "Great code doesn’t come from working alone — it comes from learning, sharing, and growing
+                    together."
+                </p>
+                <div class="space-y-4 pt-4">
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-2">Languages & Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-white border border-pink-100 rounded-lg text-sm text-gray-600 shadow-sm flex items-center"><i
+                                    class="fab fa-java mr-2 text-accent-pink"></i> Java</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-pink-100 rounded-lg text-sm text-gray-600 shadow-sm flex items-center"><i
+                                    class="fab fa-python mr-2 text-accent-pink"></i> Python</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-pink-100 rounded-lg text-sm text-gray-600 shadow-sm flex items-center"><i
+                                    class="fab fa-js mr-2 text-accent-pink"></i> JavaScript</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-pink-100 rounded-lg text-sm text-gray-600 shadow-sm flex items-center"><i
+                                    class="fab fa-html5 mr-2 text-accent-pink"></i> HTML/CSS</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-white border border-pink-100 rounded-lg text-sm text-gray-600 shadow-sm">Git
+                                & GitHub</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-pink-100 rounded-lg text-sm text-gray-600 shadow-sm">VSCode</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-pink-100 rounded-lg text-sm text-gray-600 shadow-sm">IntelliJ</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-pink-100 rounded-lg text-sm text-gray-600 shadow-sm">Postman</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600"><span class="font-semibold text-accent-pink">Basic experience
+                                with:</span> SQL, Firebase, RESTful APIs</p>
+                        <p class="text-sm text-gray-600"><span
+                                class="font-semibold text-accent-pink">Methodologies:</span> Agile & Scrum</p>
+                    </div>
+                </div>
+                <div class="pt-6">
+                    <a href="#projects"
+                        class="px-8 py-3 bg-accent-pink text-white font-medium rounded-full hover:bg-accent-dark transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block">
+                        See My Projects
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ideally an image or illustration here, using a placeholder for now or abstract shapes -->
+            <div class="flex flex-col items-center justify-center md:justify-end fade-in-up delay-100">
+                <div class="relative w-64 h-64 md:w-80 md:h-80">
+                    <div class="absolute inset-0 bg-accent-pink/20 rounded-full animate-blob"></div>
+                    <div
+                        class="absolute top-0 -right-4 w-72 h-72 bg-purple-200/40 rounded-full animate-blob animation-delay-2000">
+                    </div>
+                    <div
+                        class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200/40 rounded-full animate-blob animation-delay-4000">
+                    </div>
+
+                    <!-- Profile Image -->
+                    <div
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 md:w-72 md:h-72 bg-white rounded-full shadow-2xl overflow-hidden border-4 border-white">
+                        <img src="profile.png" alt="Melis Kırık" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <!-- Download CV Button -->
+                <a href="#" onclick="alert('CV will be available soon!')"
+                    class="mt-8 px-6 py-2 bg-white text-accent-pink border-2 border-accent-pink font-bold rounded-full hover:bg-accent-pink hover:text-white transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center">
+                    <i class="fas fa-download mr-2"></i> Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Timeline) -->
+    <section id="experience" class="py-20 bg-white/50 backdrop-blur-sm">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-montserrat font-bold text-gray-900 mb-4">Experience & Education
+                </h2>
+                <div class="w-20 h-1 bg-accent-pink mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="relative border-l-2 border-pink-200 pl-8 ml-4 md:ml-0 space-y-12">
+
+                    <!-- Timeline Item 1 -->
+                    <div class="relative fade-in-up">
+                        <span
+                            class="absolute -left-[41px] top-0 h-6 w-6 rounded-full border-4 border-white bg-accent-pink shadow-md"></span>
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-sm border border-pink-50 hover:shadow-md transition-shadow">
+                            <span
+                                class="inline-block px-3 py-1 bg-pink-50 text-accent-pink text-xs font-bold rounded-full mb-2">2021
+                                - Present</span>
+                            <h3 class="text-xl font-bold text-gray-800">Muğla Sıtkı Koçman University</h3>
+                            <h4 class="text-md text-accent-pink font-medium mb-2">Software Engineering</h4>
+                            <p class="text-gray-600 text-sm">
+                                Bachelor's degree focused on software principles, algorithms, and data structures.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item: CommonCodeBase -->
+                    <div class="relative fade-in-up delay-100">
+                        <span
+                            class="absolute -left-[41px] top-0 h-6 w-6 rounded-full border-4 border-white bg-accent-pink shadow-md"></span>
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-sm border border-pink-50 hover:shadow-md transition-shadow">
+                            <span
+                                class="inline-block px-3 py-1 bg-pink-50 text-accent-pink text-xs font-bold rounded-full mb-2">2024</span>
+                            <h3 class="text-xl font-bold text-gray-800">CommonCodeBase</h3>
+                            <h4 class="text-md text-accent-pink font-medium mb-2">Open Source Organization</h4>
+                            <p class="text-gray-600 text-sm">
+                                Developing and contributing to open-source projects as part of the organization.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-montserrat font-bold text-gray-900 mb-4">Projects</h2>
+                <div class="w-20 h-1 bg-accent-pink mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1: EduShare -->
+                <a href="https://github.com/meliskirik/eduShare" target="_blank"
+                    class="block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-pink-50 group fade-in-up">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://github.com/user-attachments/assets/357d9738-5165-42e7-b56b-36c8b6a7f6bb"
+                            alt="EduShare" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-accent-pink transition-colors">
+                            EduShare</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            A collaborative platform for university students to share knowledge and resources. Built
+                            with Java Spring, PostgreSQL, and basic web technologies.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">Java</span>
+                                <span class="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">Spring</span>
+                            </div>
+                            <span class="text-accent-pink hover:text-accent-dark text-sm font-medium">View Code <i
+                                    class="fas fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project Card 2: Wordle -->
+                <a href="https://github.com/meliskirik/Wordle" target="_blank"
+                    class="block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-pink-50 group fade-in-up delay-100">
+                    <div
+                        class="h-48 bg-gradient-to-br from-teal-100 to-emerald-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                        </div>
+                        <div class="text-center text-teal-800">
+                            <h4 class="text-3xl font-bold tracking-widest uppercase">Wordle</h4>
+                            <p class="text-sm opacity-80 mt-1">Console Game</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-accent-pink transition-colors">
+                            Wordle (Java)</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            A console-based Wordle clone developed with Java. Features feedback system, attempt limits,
+                            and OOP structure.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">Java</span>
+                                <span class="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">OOP</span>
+                            </div>
+                            <span class="text-accent-pink hover:text-accent-dark text-sm font-medium">View Code <i
+                                    class="fas fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project Card 3: More Projects -->
+                <a href="https://github.com/meliskirik?tab=repositories" target="_blank"
+                    class="block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-pink-50 group fade-in-up delay-200">
+                    <div
+                        class="h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                        </div>
+                        <i
+                            class="fab fa-github text-4xl text-accent-pink/50 group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-accent-pink transition-colors">
+                            More Projects</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            Check out my other projects, including algorithms, automation tools, and more on my GitHub
+                            profile.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span>
+                                <span class="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">Java</span>
+                                <span class="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">Automation</span>
+                                <span class="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">C++</span>
+                            </div>
+                            <span
+                                class="text-accent-pink hover:text-accent-dark text-sm font-medium whitespace-nowrap">Visit
+                                Profile <i class="fas fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-pink-100 py-10">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-montserrat font-bold text-gray-800 mb-6">Let's Connect</h2>
+            <div class="flex justify-center space-x-8 mb-8">
+                <a href="https://github.com/meliskirik" target="_blank"
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-pink-50 text-accent-pink hover:bg-accent-pink hover:text-white transition-all transform hover:scale-110">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/meliskirik" target="_blank"
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-pink-50 text-accent-pink hover:bg-accent-pink hover:text-white transition-all transform hover:scale-110">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="mailto:meliskirik33@gmail.com"
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-pink-50 text-accent-pink hover:bg-accent-pink hover:text-white transition-all transform hover:scale-110">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                &copy; 2024 made by Melis KIRIK
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
