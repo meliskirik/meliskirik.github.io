@@ -230,4 +230,5 @@ window.addEventListener('mouseout', () => {
 })
 
 init();
+// Trigger Github Pages Rebuild
 animate();
